@@ -21,9 +21,23 @@ import cn.com.validate.impl.ValidateInterfaceImpl;
  */
 public class Test {
 
+
+    String json = "{\n" +
+            "    \"head\": {\n" +
+            "        \"version\": \"1.0\",\n" +
+            "        \"method\": \"pay\"\n" +
+            "    },\n" +
+            "    \"body\": {\n" +
+            "        \"orderCode\": \"123456\",\n" +
+            "        \"amount\": \"0.12\",\n" +
+            "        \"message\": \"\"\n" +
+            "    }\n" +
+            "}";
+
+
     public static void main(String[] args) {
-        ValidateInterface validateInterface = new ValidateInterfaceImpl();
-        ValidateResult result = (ValidateResult) validateInterface.validate(new PayRequest());
+        ValidateInterface validateInterface = new ValidateInterfaceImpl(new PayRequest());
+        ValidateResult result = (ValidateResult) validateInterface.publicValidate();
         System.out.println(result.getRespCode());
         System.out.println(result.getRespMsg());
     }

@@ -38,31 +38,35 @@ public class ValidateResult <T> extends PubRequest {
         return type;
     }
 
-    public void setType(String type) {
+    public ValidateResult setType(String type) {
         this.type = type;
+        return this;
     }
 
     public T getObj() {
         return obj;
     }
 
-    public void setObj(T obj) {
+    public ValidateResult setObj(T obj) {
         this.obj = obj;
+        return this;
     }
 
     public String getRespCode() {
         return respCode;
     }
 
-    public void setRespCode(String respCode) {
+    public ValidateResult<T> setRespCode(String respCode) {
         this.respCode = respCode;
+        return this;
     }
 
     public String getRespMsg() {
         return respMsg;
     }
 
-    public void setRespMsg(String respMsg) {
+    public ValidateResult setRespMsg(String respMsg) {
         this.respMsg = respMsg;
+        return this;
     }
 }

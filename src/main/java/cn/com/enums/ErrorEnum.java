@@ -14,9 +14,10 @@ package cn.com.enums;
  * @Description: 错误码枚举类
  * @date 2017/6/11 16:43
  */
-public enum ErrorEnum {
+public enum ErrorEnum implements ValidateEnumInterface{
     // 默认系统返回成功
     DDEFULT_SUECCESS("000000", "成功");
+
     private String respCode;
     private String respMsg;
 

@@ -8,14 +8,27 @@
  */
 package cn.com.enums;
 
+import java.util.List;
+
 /**
  * @author hu.rl
  * @ClassName: ValidateEnum
  * @Description: 验证类型
  * @date 2017/6/11 15:12
  */
-public enum ValidateEnum {
-    MERCH, MERCH_SIGN;
-    private ValidateEnum() {
+public enum ValidateEnum implements ValidateEnumInterface {
+    MERCH("merch","商户验证"), MERCH_SIGN("merch_sign","");
+
+    public String validateName;
+    public String validateMessage;
+
+    public List<Enum> list ;
+
+    private ValidateEnum(String validateMessage,String validateName) {
     }
+
+
+
+
+
 }

@@ -17,8 +17,17 @@ package cn.com.validate;
 public interface ValidateInterface<T, E> {
 
     /**
-     * @Description: [验证方法]
+     * @Description: [公共验证方法]
      * @date 2017/6/11  16:03
      */
-    public <E> Object validate(T obj);
+    public <E> Object publicValidate();
+
+    /**
+     * 私有验证
+     * @param <E>
+     * @return
+     */
+    public <E> Object privateValidate();
+
+
 }
