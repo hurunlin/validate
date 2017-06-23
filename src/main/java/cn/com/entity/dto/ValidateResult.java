@@ -11,13 +11,12 @@ package cn.com.entity.dto;
 import cn.com.entity.vo.PubRequest;
 
 /**
+ * @author hu.rl
  * @ClassName: ValidateResult
  * @Description: 验证结果
- * @author hu.rl
  * @date 2017/6/11 16:08
  */
-public class ValidateResult <T> extends PubRequest {
-
+public class ValidateResult<T> extends PubRequest {
     // 验证类型
     public String type;
     // 返回异常码
@@ -27,11 +26,12 @@ public class ValidateResult <T> extends PubRequest {
     // 返回泛型对象
     public T obj;
 
-    public ValidateResult(){}
+    public ValidateResult() {
+    }
 
-    public ValidateResult(String type,T obj){
+    public ValidateResult(String type, T obj) {
         this.type = type;
-        this.obj  = obj;
+        this.obj = obj;
     }
 
     public String getType() {

@@ -9,9 +9,9 @@
 package cn.com.entity.vo;
 
 /**
+ * @author hu.rl
  * @ClassName: PubRequest
  * @Description:
- * @author hu.rl
  * @date 2017/6/11 15:58
  */
 public class PubRequest {

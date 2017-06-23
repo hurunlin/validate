@@ -16,6 +16,7 @@ package cn.com.enums;
  */
 public enum ValidateEnum {
     MERCH, MERCH_SIGN;
+
     private ValidateEnum() {
     }
 }

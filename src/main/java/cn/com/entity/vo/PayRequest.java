@@ -9,11 +9,11 @@
 package cn.com.entity.vo;
 
 /**
+ * @author hu.rl
  * @ClassName: PayRequest
  * @Description: 支付请求对象
- * @author hu.rl
  * @date 2017/6/11 15:58
  */
-public class PayRequest extends  PubRequest{
+public class PayRequest extends PubRequest {
 
 }
