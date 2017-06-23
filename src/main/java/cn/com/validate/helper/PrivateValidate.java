@@ -12,6 +12,9 @@ import cn.com.entity.dto.ValidateResult;
 import cn.com.entity.vo.PayRequest;
 import cn.com.enums.ErrorEnum;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author hu.rl
  * @ClassName: PrivateValidate

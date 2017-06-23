@@ -21,11 +21,24 @@ import cn.com.validate.helper.PublicValidate;
  * @Description: 验证实现类
  * @date 2017/6/11 16:04
  */
-public class ValidateInterfaceImpl<T, E> implements ValidateInterface {
+public class ValidateInterfaceImpl implements ValidateInterface {
 
-    public Object validate(Object obj) {
-        // 获取对象
-        PayRequest request = (PayRequest) obj;
+    /**
+     * 请求参数对象
+     */
+    private PayRequest request;
+
+
+    /**
+     * 构造方法
+     *
+     * @param request
+     */
+    public ValidateInterfaceImpl(PayRequest request) {
+        this.request = request;
+    }
+
+    public Object publicValidate() {
         // 获取请求的类型
         String method = request.getMethod();
         //  根据接口名验证公共验证
@@ -37,6 +50,12 @@ public class ValidateInterfaceImpl<T, E> implements ValidateInterface {
         if (!ErrorEnum.DDEFULT_SUECCESS.getRespCode().equals(pubResult.getRespCode())) {
             return pubResult;
         }
+        // 封装默认异常报文
+        return null;
+    }
+
+
+    public Object privateValidate() {
         // 根据接口名验证部分验证
         PrivateValidate<ValidateResult> privateValidate = new PrivateValidate<ValidateResult>();
         privateValidate.priValidate(request);
@@ -46,7 +65,7 @@ public class ValidateInterfaceImpl<T, E> implements ValidateInterface {
             // 返回请求对象
             return priResult;
         }
-        // 封装默认异常报文
+
         return null;
     }
 }
